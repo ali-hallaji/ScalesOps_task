@@ -20,7 +20,7 @@ class ImageDownloader:
             'num': num_images
         }
 
-        response = requests.get(self.base_url, params=params)
+        response = requests.get(self.base_url, params=params, timeout=30)
         response.raise_for_status()
         results = response.json()
         image_urls = [item['link'] for item in results.get('items', [])]

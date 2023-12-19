@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from .models import Base, ImageModel
+from models import Base, ImageModel
 import base64
 from io import BytesIO
 

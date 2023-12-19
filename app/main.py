@@ -1,6 +1,6 @@
-from .image_downloader import ImageDownloader
-from .image_processor import ImageProcessor
-from .db_manager import DBManager
+from image_downloader import ImageDownloader
+from image_processor import ImageProcessor
+from db_manager import DBManager
 
 
 class MainApp:
@@ -16,6 +16,7 @@ class MainApp:
         images = ImageProcessor.download_and_resize_images(image_urls)
         # Store images in the database using the DBManager object
         self.db_manager.store_images(images)
+
 
 if __name__ == "__main__":
     # Configuration parameters
